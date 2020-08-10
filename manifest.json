@@ -16,5 +16,8 @@
             "48": "images/19globe_115453.png",
             "64": "images/19globe_115453.png",
             "128": "images/19globe_115453.png"
-    }
+    },
+  "background": {
+    "scripts": ["content_scripts/background.js"]
+  }
 }
