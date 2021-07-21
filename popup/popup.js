@@ -7,11 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
 function onKeyUp(e) {
 	const key = e.keyCode;
 	if (key == 13) {
-		getGPS();
+		openYandexMaps();
 	}
 }
 
-function getGPS() {
+function openYandexMaps() {
 	const sity = 'moscow';
 	const addressString = document.getElementById('addressString').value.toString();
 	const _url = `https://yandex.ru/maps/${sity}/?text=${addressString}`;
