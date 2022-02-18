@@ -1,31 +1,35 @@
 {
-  "manifest_version": 2,
-  "name": "YamGPS",
-  "description": "Получает GPS на Яндекс карте",
-  "version": "1.0",
-
-  "browser_action": {
-    "default_title": "GPS на Яндекс карте",
-    "default_icon": "images/19globe_115453.png",
-    "default_popup": "popup/popup.html"
-  },
-
-  "permissions": ["tabs", "https://yandex.ru/maps/*"],
-
-  "icons": {
-    "48": "images/19globe_115453.png",
-    "64": "images/19globe_115453.png",
-    "128": "images/19globe_115453.png"
-  },
-
-  "background": {
-    "scripts": ["content_scripts/background.js"]
-  },
-
-  "content_scripts": [
-    {
-      "matches": ["https://yandex.ru/maps/*"],
-      "js": ["content_scripts/content.js"]
-    }
-  ]
+	"manifest_version": 2,
+	"name": "YamGPS",
+	"description": "Открывает Яндекс карту с введёным адресом или координатами",
+	"version": "1.0",
+	"browser_action": {
+		"default_title": "GPS на Яндекс карте",
+		"default_icon": "images/19globe_115453.png",
+		"default_popup": "popup/popup.html"
+	},
+	"permissions": [
+		"tabs",
+		"https://yandex.ru/maps/*"
+	],
+	"icons": {
+		"48": "images/19globe_115453.png",
+		"64": "images/19globe_115453.png",
+		"128": "images/19globe_115453.png"
+	},
+	"background": {
+		"scripts": [
+			"content_scripts/background.js"
+		]
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"https://yandex.ru/maps/*"
+			],
+			"js": [
+				"content_scripts/content.js"
+			]
+		}
+	]
 }
